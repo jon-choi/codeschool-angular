@@ -11,6 +11,13 @@
         <p>{{store.product.description}}</p>
         <button ng-show="store.product.canPurchase"> Add to Cart </button>
     </div>
+    <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+                            ng-submit="reviewCtrl.addReview(product)>
+        <blockquote>
+        <b> Stars: {{reviewCtrl.review.stars}}</b>
+        {{reviewCtrl.review.body}}
+        <cite>by: {{reviewCtrl.review.author}}</cite>
+        </blockquote>
     {{store.product.name}}
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/bootstrap/bootstrap.js"></script>
